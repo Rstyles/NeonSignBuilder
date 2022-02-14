@@ -6,27 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Syne+Tactile&display=swap" rel="stylesheet">
 </head>
 <body>
-    <canvas id="neonSignCanvas" width="600" height="60"></canvas>
-    <img id="neonSignImage">
-    <br>
-    <label for="neonSignText">Text:</label>
-    <textarea name="neonSignText" id="neonSignText"></textarea>
-    <br>
+    <div class="canvas_wrapper">
+        <div class="canvas_left">
+            <canvas id="neonSignCanvas" width="600" height="60"></canvas>
+            <span class="neonSignHelper"></span>
+            <img id="neonSignImage">
+        </div>
+        <br>
+        
+        <div class="canvas_right">
+            <label for="neonSignText">Text:</label>
+            <textarea name="neonSignText" id="neonSignText"></textarea>
+            <form action="#n" name="colorPicker" class="neonSignEditorForm">
+                <div class="colorPickerRadioGroup">
+                    <input type="radio" name="SignColor" id="ColorRed" value="red" checked="true">
+                    <input type="radio" name="SignColor" id="ColorGreen" value="green">
+                    <input type="radio" name="SignColor" id="ColorBlue" value="blue">
+                    <input type="radio" name="SignColor" id="ColorOrange" value="orange">
+                    <input type="radio" name="SignColor" id="ColorPink" value="pink">
+                    <input type="radio" name="SignColor" id="ColorWhite" value="#eee">
+                    <input type="radio" name="SignColor" id="ColorYellow" value="yellow">
+                    <input type="radio" name="SignColor" id="ColorIceBlue" value="#24B7DE">
+                </div>
 
-    <label for="neonSignColor">Color:</label>
-    <select name="neonSignColor" id="neonSignColor">
-        <option value="red">Red</option>
-        <option value="green">Green</option>
-        <option value="blue">Blue</option>
-        <option value="yellow">Yellow</option>
-        <option value="orange">Orange</option>
-    </select>
-    <br>
+                <div id="fontPickerRadioGroup">
+                    <input type="radio" name="signFont" id="fontComicSans" value="Comic Sans MS, Comic Sans, cursive" checked="true">
+                    <label for="fontComicSans" style="font-family: Comic Sans MS, Comic Sans, cursive;">Comic Sans</label>
 
-    <button onclick="drawImage()" id="neonSignSubmit">Submit</button>
+                    <input type="radio" name="signFont" id="fontTrattatello" value="Trattatello, fantasy">
+                    <label for="fontTrattatello" style="font-family: Trattatello, fantasy;">Trattatello</label>
 
+                    <input type="radio" name="signFont" id="fontAndaleMono" value="Andale Mono, monospace">
+                    <label for="fontAndaleMono" style="font-family: Andale Mono, monospace;">Andale Mono</label>
+
+                    <input type="radio" name="signFont" id="fontHelvetica" value="Helvetica, sans-serif">
+                    <label for="fontHelvetica" style="font-family: Helvetica, sans-serif;">Helvetica</label>
+                </div>
+            </form>
+
+            <button onclick="submitNeonSign()" id="neonSignSubmit">Submit</button>
+
+            <div class="neonSignPriceWrapper">
+                <p id="neonSignPrice"></p>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
