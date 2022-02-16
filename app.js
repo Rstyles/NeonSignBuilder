@@ -12,23 +12,24 @@ function submitNeonSign() {
     drawImage(canvas, context, image, text, font, color);
 
     numberWhitePixels = countPixels(canvas, context);
-    console.log(numberWhitePixels);
     price.innerHTML = '$' + parseFloat(numberWhitePixels/10).toFixed(2);
 }
 
 function drawImage(neonSignCanvas, canvasContext, imageElement, canvasText, canvasfont, canvasColor) {
+    canvasContext.clearRect(0, 0, 1800, 1800);
+    
+    canvasContext.textBaseline = 'ideographic';
+    var textMeasurement = canvasContext.measureText(canvasText.value);
+    neonSignCanvas.width = textMeasurement.width+150;
+    neonSignCanvas.height = 600;
+
     canvasContext.fillStyle = 'white';
     canvasContext.font = canvasfont;
     canvasContext.shadowColor = canvasColor;
     canvasContext.shadowBlur = 20;
     canvasContext.textAlign = 'center';
 
-    canvasContext.clearRect(0, 0, 900, 600);
-    
-    var textMeasurement = canvasContext.measureText(canvasText.value);
-    //console.log(textMeasurement.width);
-    
-    canvasContext.fillText(canvasText.value, neonSignCanvas.width/2, 50, textMeasurement.width);
+    drawLines(canvasContext, canvasText.value, neonSignCanvas.width/2, 70, 70);
     imageElement.src = canvasContext.canvas.toDataURL();
 }
 
@@ -44,9 +45,16 @@ function countPixels(canvas, context) {
                 (imageData.data[index + 3] / 255)];
 
         if (rgba[0] == 255 && rgba[1] == 255 && rgba[2] == 255 && rgba[3] == 1) {
-            //console.log(rgba);
             counter++;
         }
 	}
     return counter;
 } 
+
+function drawLines(context, text, x, y, lineHeight) {
+    var lines = text.split('\n');
+
+    for (var i = 0; i < 8 ; i++) {
+        context.fillText(lines[i], x, y + (i*lineHeight));
+    }
+}

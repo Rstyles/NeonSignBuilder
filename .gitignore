@@ -4,3 +4,6 @@ node_modules
 #ignore package json files
 package-lock.json
 package.json
+
+# vscode config
+.vscode
