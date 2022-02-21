@@ -41,6 +41,7 @@ img#neonSignImage {
 
 .canvas_right .neonSignEditorForm {
   border: black solid 2px;
+  padding: 4%;
 }
 
 /* RADIO BUTTONS */
@@ -271,4 +272,37 @@ input[type="radio"]#ColorIceBlue:checked:after {
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+}
+
+.fontGroup input[type="radio"] {
+  display: none;
+}
+
+.fontGroup input[type="radio"]:checked + label {
+  border: 2px solid black;
+}
+
+.fontGroup label {
+  padding: 2px;
+  margin: 3% 2% 3% 2%;
+}
+
+#fontPickerRadioGroup {
+  margin: 2%;
+}
+
+#fontSizePickerRadioGroup {
+  margin: 2%;
+}
+
+.supportOptions input[type="radio"] {
+  display: none;
+}
+
+.supportOptions input[type="radio"]:checked + label {
+  border: 2px solid black;
+}
+
+hr {
+  width: 90%;
 }

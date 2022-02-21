@@ -6,7 +6,7 @@ function submitNeonSign() {
 
   var price = document.getElementById("neonSignPrice");
 
-  var basePrice = 150;
+  var basePrice = 50;
   
   var fontSize = document.querySelector('input[name="signFontSize"]:checked').value;
   
@@ -84,4 +84,8 @@ function calculatePrice(pixelCount, basePrice) {
   else {
     return parseFloat(pixelCount).toFixed(2);
   }
+}
+
+function addExtras() {
+  
 }

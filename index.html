@@ -23,9 +23,11 @@
     <br />
 
     <div class="canvas_right">
-      <label for="neonSignText">Text:</label>
-      <textarea name="neonSignText" id="neonSignText"></textarea>
       <form action="#n" name="colorPicker" class="neonSignEditorForm">
+        <label for="neonSignText">Text:</label>
+        <textarea name="neonSignText" id="neonSignText"></textarea>
+
+        <h3 class="neonSignHeading">Color:</h3>
         <div class="colorPickerRadioGroup">
           <input type="radio" name="SignColor" id="ColorRed" value="red" checked="true" />
           <input type="radio" name="SignColor" id="ColorGreen" value="green" />
@@ -36,8 +38,9 @@
           <input type="radio" name="SignColor" id="ColorYellow" value="yellow" />
           <input type="radio" name="SignColor" id="ColorIceBlue" value="#24B7DE" />
         </div>
-
-        <div id="fontPickerRadioGroup">
+        <hr>
+        <h3 class="neonSignHeading">Font:</h3>
+        <div id="fontPickerRadioGroup" class="fontGroup">
           <input type="radio" name="signFont" id="fontComicSans" value="Comic Sans MS, Comic Sans, cursive"
             checked="true" />
           <label for="fontComicSans" style="font-family: Comic Sans MS, Comic Sans, cursive">Comic Sans</label>
@@ -51,16 +54,48 @@
           <input type="radio" name="signFont" id="fontHelvetica" value="Helvetica, sans-serif" />
           <label for="fontHelvetica" style="font-family: Helvetica, sans-serif">Helvetica</label>
         </div>
+        <hr>
 
-        <div class="fontSizePickerRadioGroup">
-          <input type="radio" name="signFontSize" id="fontSizeSmall" checked="true" value="50"/>
+        <h3 class="neonSignHeading">Size:</h3>
+        <div id="fontSizePickerRadioGroup" class="fontGroup">
+          <input type="radio" name="signFontSize" id="fontSizeSmall" checked="true" value="50" />
           <label for="fontSizeSmall">Small</label>
 
-          <input type="radio" name="signFontSize" id="fontSizeMedium" value="60"/>
+          <input type="radio" name="signFontSize" id="fontSizeMedium" value="60" />
           <label for="fontSizeMedium">Medium</label>
 
-          <input type="radio" name="signFontSize" id="fontSizeLarge" value="70"/>
+          <input type="radio" name="signFontSize" id="fontSizeLarge" value="70" />
           <label for="fontSizeLarge">Large</label>
+        </div>
+        <hr>
+
+        <h3 class="neonSignHeading">Support:</h3>
+        <div class="supportOptions">
+          <input type="radio" name="neonSignSupportType" id="cutToShape" value="Cut to Shape" checked="true">
+          <label for="cutToShape">Cut to Shape -
+            <span class="flavor-text">Acrylic display that follows the shape of your sign.</span>
+          </label>
+        </div>
+
+        <div class="supportOptions">
+          <input type="radio" name="neonSignSupportType" id="hollowOut" value="Hollow Out">
+          <label for="hollowOut">Hollow Out -
+            <span class="flavor-text">The most descreet transparent backing.</span>
+          </label>
+        </div>
+
+        <div class="supportOptions">
+          <input type="radio" name="neonSignSupportType" id="fullBoard" value="Full Board">
+          <label for="fullBoard">Full Board -
+            <span class="flavor-text">Acrylic display in shape of a square around your sign.</span>
+          </label>
+        </div>
+
+        <div class="supportOptions">
+          <input type="radio" name="neonSignSupportType" id="stand" value="Stand">
+          <label for="stand">Stand -
+            <span class="flavor-text">Make your sign upright on the floor.</span>
+          </label>
         </div>
       </form>
 
