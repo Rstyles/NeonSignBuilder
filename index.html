@@ -23,9 +23,9 @@
     <br />
 
     <div class="canvas_right">
-      <form action="#n" name="colorPicker" class="neonSignEditorForm">
+      <form action="#n" name="colorPicker" class="neonSignEditorForm" onchange="submitNeonSign()">
         <label for="neonSignText">Text:</label>
-        <textarea name="neonSignText" id="neonSignText"></textarea>
+        <textarea name="neonSignText" id="neonSignText" onkeyup="submitNeonSign()"></textarea>
 
         <h3 class="neonSignHeading">Color:</h3>
         <div class="colorPickerRadioGroup">
@@ -57,15 +57,8 @@
         <hr>
 
         <h3 class="neonSignHeading">Size:</h3>
-        <div id="fontSizePickerRadioGroup" class="fontGroup">
-          <input type="radio" name="signFontSize" id="fontSizeSmall" checked="true" value="50" />
-          <label for="fontSizeSmall">Small</label>
-
-          <input type="radio" name="signFontSize" id="fontSizeMedium" value="60" />
-          <label for="fontSizeMedium">Medium</label>
-
-          <input type="radio" name="signFontSize" id="fontSizeLarge" value="70" />
-          <label for="fontSizeLarge">Large</label>
+        <div id="fontSizeSliderWrapper" class="fontGroup">
+          <input type="range" name="fontSizeSlider" id="fontSizeSlider" class="fontSizeSlider" min="50" max="75" onmousemove="submitNeonSign()">
         </div>
         <hr>
 

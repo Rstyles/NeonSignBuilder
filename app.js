@@ -6,9 +6,10 @@ function submitNeonSign() {
 
   var price = document.getElementById("neonSignPrice");
 
-  var basePrice = 50;
+  var basePrice = 0;
+  var pricePerInch = 0;
   
-  var fontSize = document.querySelector('input[name="signFontSize"]:checked').value;
+  var fontSize = document.querySelector('input[name="fontSizeSlider"]').value;
   
   var font = fontSize + 'px ' + document.querySelector('input[name="signFont"]:checked').value;
   console.log(font);
@@ -16,18 +17,11 @@ function submitNeonSign() {
   
   drawImage(canvas, context, image, text, font, color);
   
-  numberWhitePixels = countPixels(canvas, context);
-  price.innerHTML = "$" + calculatePrice(numberWhitePixels/10, basePrice);
+  var numberWhitePixels = countPixels(canvas, context);
+  price.innerHTML = "$" + calculatePrice(numberWhitePixels, basePrice);
 }
 
-function drawImage(
-  neonSignCanvas,
-  canvasContext,
-  imageElement,
-  canvasText,
-  canvasfont,
-  canvasColor
-) {
+function drawImage(neonSignCanvas, canvasContext, imageElement, canvasText, canvasfont, canvasColor) {
   canvasContext.clearRect(0, 0, 1800, 1800);
 
   canvasContext.textBaseline = "ideographic";
@@ -77,7 +71,7 @@ function drawLines(context, text, x, y, lineHeight) {
   }
 }
 
-function calculatePrice(pixelCount, basePrice) {
+function calculatePrice(pixelCount, basePrice, pricePerInch) {
   if (pixelCount < basePrice) {
     return parseFloat(basePrice).toFixed(2);
   } 
@@ -86,6 +80,3 @@ function calculatePrice(pixelCount, basePrice) {
   }
 }
 
-function addExtras() {
-  
-}
