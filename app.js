@@ -1,33 +1,63 @@
+var canvas = document.getElementById("neonSignCanvas");
+var context = canvas.getContext("2d");
+var text = document.getElementById("neonSignText");
+
+var image = document.getElementById("neonSignImage");
+
 function submitNeonSign() {
-  var canvas = document.getElementById("neonSignCanvas");
-  var context = canvas.getContext("2d");
-  var image = document.getElementById("neonSignImage");
-  var text = document.getElementById("neonSignText");
 
   var price = document.getElementById("neonSignPrice");
 
   var basePrice = 0;
   var pricePerInch = 0;
-  
+
   var fontSize = document.querySelector('input[name="fontSizeSlider"]').value;
-  
+
   var font = fontSize + 'px ' + document.querySelector('input[name="signFont"]:checked').value;
-  console.log(font);
   var color = document.querySelector('input[name="SignColor"]:checked').value;
-  
+
   drawImage(canvas, context, image, text, font, color);
-  
+
   var numberWhitePixels = countPixels(canvas, context);
   price.innerHTML = "$" + calculatePrice(numberWhitePixels, basePrice);
+
+
+  var isDraggable = false
+  canvas.onmousedown = function (e) {
+    var mouseX = e.pageX - this.offsetLeft;
+    var mouseY = e.pageY - this.offsetTop;
+    //console.log(mouseX + ' ' + mouseY);
+    
+    console.log(this.x);
+    if (mouseX >= (this.x - image.width / 2) &&
+    mouseX <= (this.x + image.width / 2) &&
+    mouseY >= (this.y - image.height / 2) &&
+    mouseY <= (this.y + image.height / 2)) {
+      isDraggable = true;
+    }
+  }
+  canvas.onmousemove = function (e) {
+    console.log(e.pageX + '|' + e.pageY);
+    while (isDraggable != false) {
+      drawImage(this, context, image, text, font, e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+    }
+  }
+  canvas.onmouseup = function () {
+    isDraggable = false;
+    console.log(isDraggable);
+  }
 }
 
-function drawImage(neonSignCanvas, canvasContext, imageElement, canvasText, canvasfont, canvasColor) {
-  canvasContext.clearRect(0, 0, 1800, 1800);
+function drawImage(neonSignCanvas, canvasContext, imageElement, canvasText, canvasfont, canvasColor, x, y) {
+  x = (typeof x !== 'undefined') ? x : neonSignCanvas.width / 2
+  y = (typeof y !== 'undefined') ? y : 70
+
+  canvasContext.clearRect(0, 0, neonSignCanvas.width, neonSignCanvas.height);
 
   canvasContext.textBaseline = "ideographic";
   var textMeasurement = canvasContext.measureText(canvasText.value);
   neonSignCanvas.width = textMeasurement.width + 150;
-  neonSignCanvas.height = 600;
+  neonSignCanvas.height = 225;
 
   canvasContext.fillStyle = "white";
   canvasContext.font = canvasfont;
@@ -35,8 +65,31 @@ function drawImage(neonSignCanvas, canvasContext, imageElement, canvasText, canv
   canvasContext.shadowBlur = 20;
   canvasContext.textAlign = "center";
 
-  drawLines(canvasContext, canvasText.value, neonSignCanvas.width / 2, 70, 70);
+  drawLines(canvasContext, canvasText.value, x, y, 70);
   imageElement.src = canvasContext.canvas.toDataURL();
+}
+
+
+function drawLines(context, text, x, y, lineHeight) {
+  var lines = text.split("\n");
+
+  if (lines.length > 3) {
+    lines.length = 3;
+  }
+
+  for (var i = 0; i < lines.length; i++) {
+    context.fillText(lines[i], x, y + i * lineHeight);
+  }
+
+}
+
+function calculatePrice(pixelCount, basePrice, pricePerInch) {
+  if (pixelCount < basePrice) {
+    return parseFloat(basePrice).toFixed(2);
+  }
+  else {
+    return parseFloat(pixelCount).toFixed(2);
+  }
 }
 
 function countPixels(canvas, context) {
@@ -58,25 +111,3 @@ function countPixels(canvas, context) {
   }
   return counter;
 }
-
-function drawLines(context, text, x, y, lineHeight) {
-  var lines = text.split("\n");
-
-  if (lines.length > 8) {
-    lines.length = 8;
-  }
-
-  for (var i = 0; i < lines.length; i++) {
-    context.fillText(lines[i], x, y + i * lineHeight);
-  }
-}
-
-function calculatePrice(pixelCount, basePrice, pricePerInch) {
-  if (pixelCount < basePrice) {
-    return parseFloat(basePrice).toFixed(2);
-  } 
-  else {
-    return parseFloat(pixelCount).toFixed(2);
-  }
-}
-

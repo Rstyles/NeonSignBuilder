@@ -2,12 +2,12 @@ canvas {
   border: 1px black solid;
 }
 
-#neonSignCanvas {
+/* #neonSignCanvas {
   display: none;
-}
+} */
 
-#neonSignText {
-  width: 40%;
+#neonSignImage {
+  display: none;
 }
 
 .canvas_left {
@@ -27,7 +27,7 @@ canvas {
 }
 
 img#neonSignImage {
-  display: inline-block;
+  display: none;
   margin: auto;
   vertical-align: middle;
 }
