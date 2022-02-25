@@ -2,11 +2,7 @@ canvas {
   border: 1px black solid;
 }
 
-/* #neonSignCanvas {
-  display: none;
-} */
-
-#neonSignImage {
+#neonSignCanvas {
   display: none;
 }
 
@@ -27,7 +23,6 @@ canvas {
 }
 
 img#neonSignImage {
-  display: none;
   margin: auto;
   vertical-align: middle;
 }
