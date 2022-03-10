@@ -11,9 +11,12 @@ canvas {
   width: 50%;
   height: 600px;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   background-color: #555;
   white-space: nowrap;
   vertical-align: middle;
+  overflow: hidden;
 }
 
 .neonSignHelper {
@@ -42,231 +45,248 @@ img#neonSignImage {
 /* RADIO BUTTONS */
 
 input[type="radio"] {
-  margin: 25px;
+  margin: 20px;
+
 }
 
 input[type="radio"]#ColorRed:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: red;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid black;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorRed:checked:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: red;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorGreen:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: green;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid black;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorGreen:checked:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: green;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorBlue:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: blue;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid black;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorBlue:checked:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: blue;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorOrange:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: orange;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid black;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorOrange:checked:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: orange;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorPink:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: pink;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid black;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorPink:checked:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: pink;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorWhite:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: white;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid black;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorWhite:checked:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: white;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorYellow:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: yellow;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid black;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorYellow:checked:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: yellow;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorIceBlue:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: #24b7de;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid black;
+  opacity: 100%;
 }
 
 input[type="radio"]#ColorIceBlue:checked:after {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 15px;
-  top: -5px;
-  left: -3px;
+  top: -10px;
+  left: -10px;
   position: relative;
   background-color: #24b7de;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+  opacity: 100%;
 }
 
 .fontGroup input[type="radio"] {
@@ -331,4 +351,8 @@ hr {
   height: 25px;
   background: #04AA6D;
   cursor: pointer;
+}
+
+.backgroundImageUploader {
+  margin: 2%;
 }
