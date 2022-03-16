@@ -1,0 +1,4 @@
+# Consumer_key = ck_4384612246e296fbf74e16927e69132565b31ec4
+# Consumer_secret = cs_27259dea19d36c6f77365eb9020fc9b474e92069
+
+GET https://localhost/wordpress/wp-json/wc/v3/products?consumer_key=ck_4384612246e296fbf74e16927e69132565b31ec4&consumer_secret=cs_27259dea19d36c6f77365eb9020fc9b474e92069 HTTP/1.1
