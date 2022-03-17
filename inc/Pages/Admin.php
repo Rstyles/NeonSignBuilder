@@ -84,12 +84,12 @@ class Admin extends BaseController
 			 [
 				'option_group' => 'neon_sign_builder_options_group',
 				'option_name' => 'nz_woocommerce_consumer_key',
-				'callback' => array($this->callbacks_mngr, 'passwordSanatize')
+				'callback' => array($this->callbacks_mngr, 'textboxSanatize')
 			 ],
 			 [
 				'option_group' => 'neon_sign_builder_options_group',
 				'option_name' => 'nz_woocommerce_consumer_secret',
-				'callback' => array($this->callbacks_mngr, 'passwordSanatize')
+				'callback' => array($this->callbacks_mngr, 'textboxSanatize')
 			 ]
 		];
 		$this->settings->setSettings($args);
@@ -112,7 +112,7 @@ class Admin extends BaseController
 			[
 				'id' => 'nz_woocommerce_consumer_key',
 				'title' => 'Consumer Key',
-				'callback' => array($this->callbacks_mngr, 'passwordField'),
+				'callback' => array($this->callbacks_mngr, 'textboxField'),
 				'page' => 'neon_sign_builder_plugin',
 				'section' => 'neon_sign_builder_admin_index',
 				'args' => [
@@ -123,7 +123,7 @@ class Admin extends BaseController
 			[
 				'id' => 'nz_woocommerce_consumer_secret',
 				'title' => 'Consumer Secret',
-				'callback' => array($this->callbacks_mngr, 'passwordField'),
+				'callback' => array($this->callbacks_mngr, 'textboxField'),
 				'page' => 'neon_sign_builder_plugin',
 				'section' => 'neon_sign_builder_admin_index',
 				'args' => [

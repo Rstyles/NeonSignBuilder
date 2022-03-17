@@ -66,7 +66,7 @@ class NZ_NeonSignBuilder_Embed {
 		<br />
 	
 		<div class=\"canvas_right\">
-		  <form action=\"#n\" name=\"colorPicker\" class=\"neonSignEditorForm\" onchange=\"submitNeonSign()\">
+		  <form action=\"" .plugins_url('inc/NeonSign.php', __FILE__) ."\" method=\"post\" name=\"colorPicker\" class=\"neonSignEditorForm\" onchange=\"submitNeonSign()\">
 			<label for=\"neonSignText\">Text:</label>
 			<textarea name=\"neonSignText\" id=\"neonSignText\" onkeyup=\"submitNeonSign()\"></textarea>
 	
@@ -133,9 +133,9 @@ class NZ_NeonSignBuilder_Embed {
 				<span class=\"flavor-text\">Make your sign upright on the floor.</span>
 			  </label>
 			</div>
+			<button onclick=\"submitNeonSign()\" id=\"neonSignSubmit\">Submit</button>
 		  </form>
 	
-		  <button onclick=\"submitNeonSign()\" id=\"neonSignSubmit\">Submit</button>
 	
 		  <div class=\"neonSignPriceWrapper\">
 			<p id=\"neonSignPrice\"></p>

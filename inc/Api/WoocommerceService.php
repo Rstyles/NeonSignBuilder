@@ -3,13 +3,13 @@
  * @package NeonSignBuilder-NozakConsulting
  */
 
-namespace Inc\Api\Services;
+namespace Inc\Api;
 
 use Automattic\WooCommerce\Client;
 use Inc\Base\BaseController;
 
-class WoocommerceService extends BaseController {
-
+class WoocommerceService extends BaseController
+{
     private $consumer_key;
     /**
      * Get the value of consumer_key
@@ -73,8 +73,7 @@ class WoocommerceService extends BaseController {
         $description,
         $category,
         $image,
-        $woocommerce = null) {
-            $woocommerce = this->init($woocommerce);
+        $woocommerce) {
             $data = [
                 'name' => $name,
                 'type' => $type,
