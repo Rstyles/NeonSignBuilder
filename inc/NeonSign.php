@@ -7,7 +7,6 @@ $parse_uri = explode( 'wp-content', $_SERVER['SCRIPT_FILENAME'] );
 require_once( $parse_uri[0] . 'wp-load.php' );
 
 use Automattic\WooCommerce\Client;
-use Inc\Api\WoocommerceService;
 
 $err = [];
 $consumer_key = "";
@@ -27,38 +26,66 @@ if ( null !== get_option( 'nz_woocommerce_consumer_secret' ) ) {
 
 
 $woocommerce = new Client(
-    $store_url . 'wp-json/',
+    $store_url,
     $consumer_key,
     $consumer_secret,
     [
         'wp_api' => true,
         'version' => 'wc/v3',
-        'verify_ssl' => false
+        'query_string_auth' => true,
+        'timeout' => 0,
+        'verify_ssl'=> false
     ]
 );
 
-$data = [
-    'name' => 'Premium Quality',
+define('UPLOAD_DIR', wp_upload_dir()['path'] . '/');
+$img = $_POST['neonsignPostImg'];
+$img = str_replace('data:image/png;base64,', '', $img);
+$img = str_replace(' ', '+', $img);
+$data = base64_decode($img);
+$file_id = uniqid();
+$file = UPLOAD_DIR. $file_id . '.png';
+$success = file_put_contents($file, $data);
+$file_url = wp_upload_dir()['url'] . '/' . $file_id . '.png';
+$file_url = str_replace('http://', 'https://', $file_url);
+
+$mime = 'image/png';
+
+$upload_id = wp_insert_attachment( [
+    'guid' => $file_url,
+    'post_mime_type' => $mime,
+    'post_title' => 'Custom Neon Sign - ' . $_POST['neonSignText'],
+    'post_content' => '',
+    'post_status' => 'inherit'
+], $file);
+require_once( ABSPATH . 'wp-admin/includes/image.php' );
+wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $file ) );
+
+
+
+
+// Send the post request
+$post_data = [
+    'name' => 'Custom Neon Sign - ' . $_POST['neonSignText'],
+    'slug' => 'custom-neon-sign-' . $file_id,
     'type' => 'simple',
-    'regular_price' => '21.99',
-    'description' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-    'short_description' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+    'regular_price' => $_POST['priceField'],
+    'description' => 'Color: ' . $_POST['SignColor'] .
+               '</br> Font: ' . $_POST['signFont'],
+    'short_description' => 'This custom neon sign was built with the Nozak Consulting Neon Sign Builder.',
+    'catalog_visibility' => 'hidden',
     'categories' => [
         [
-            'id' => 9
-        ],
-        [
-            'id' => 14
+            'id' => 0
         ]
     ],
     'images' => [
         [
-            'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg'
-        ],
-        [
-            'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg'
+            //'src' => $file_url
         ]
     ]
 ];
 
-print_r($woocommerce->post('products', $data));
+wp_redirect($store_url . '/product/custom-neon-sign-' . $file_id . '/');
+print_r($file_url);
+print_r($woocommerce->post('products', $post_data));

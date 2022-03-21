@@ -133,7 +133,9 @@ class NZ_NeonSignBuilder_Embed {
 				<span class=\"flavor-text\">Make your sign upright on the floor.</span>
 			  </label>
 			</div>
+			$<input type=\"text\" name=\"priceField\" id=\"priceField\" readonly=\"true\">
 			<button onclick=\"submitNeonSign()\" id=\"neonSignSubmit\">Submit</button>
+			<input type=\"hidden\" id=\"postImg\" name=\"neonsignPostImg\">
 		  </form>
 	
 	
