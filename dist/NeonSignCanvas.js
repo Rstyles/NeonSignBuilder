@@ -1,4 +1,3 @@
-"use strict";
 var canvas = document.getElementById("neonSignCanvas");
 var context = canvas.getContext("2d");
 var text = document.getElementById("neonSignText");

@@ -1,4 +1,3 @@
-"use strict";
 var dragItem = image;
 var container = document.querySelector(".canvas_left");
 var active = false;

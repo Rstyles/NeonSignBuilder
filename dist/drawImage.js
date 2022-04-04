@@ -1,4 +1,3 @@
-"use strict";
 function drawImage(neonSignCanvas, canvasContext, imageElement, canvasText, canvasfont, canvasColor, x, y) {
     if (x === void 0) { x = neonSignCanvas.width / 2; }
     if (y === void 0) { y = 70; }

@@ -1,4 +1,0 @@
-# Consumer_key = ck_60768cabb55b975d8f7d037101b23e0ac7b77702
-# Consumer_secret = cs_d88eac01bfacdba0e9832d151f61b1678520e01f
-
-GET https://127.0.0.1:4433/wordpress/wp-json/wc/v3/products?consumer_key=ck_60768cabb55b975d8f7d037101b23e0ac7b77702&consumer_secret=cs_d88eac01bfacdba0e9832d151f61b1678520e01f HTTP/1.1

@@ -63,7 +63,6 @@ wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upl
 
 
 
-
 // Send the post request
 $post_data = [
     'name' => 'Custom Neon Sign - ' . $_POST['neonSignText'],
@@ -76,7 +75,7 @@ $post_data = [
     'catalog_visibility' => 'hidden',
     'categories' => [
         [
-            'id' => 0
+            'id' => '57'
         ]
     ],
     'images' => [
@@ -86,6 +85,6 @@ $post_data = [
     ]
 ];
 
+$woocommerce->post('products', $post_data);
+
 wp_redirect($store_url . '/product/custom-neon-sign-' . $file_id . '/');
-print_r($file_url);
-print_r($woocommerce->post('products', $post_data));

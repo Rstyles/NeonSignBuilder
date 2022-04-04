@@ -1,4 +1,3 @@
-"use strict";
 function calculatePrice(pricePerInch, pixelCount) {
     var numInches = (pixelCount * 13) / 136 * 1.1;
     return parseFloat((numInches * pricePerInch).toFixed(2));
