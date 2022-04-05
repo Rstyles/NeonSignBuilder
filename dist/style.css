@@ -353,3 +353,8 @@ input[type="radio"]#ColorIceBlue:checked:after {
 .dimmer-type {
   width: 100%;
 }
+
+/* 3M MOUNTING OPTIONS */
+.mounting {
+  display: inherit;
+}

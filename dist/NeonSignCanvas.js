@@ -11,7 +11,27 @@ function submitNeonSign() {
     var color = document.querySelector('input[name="SignColor"]:checked').value;
     drawImage(canvas, context, image, text, font, color);
     var numberWhitePixels = countPixels(canvas, context);
-    price.value = calculatePrice(pricePerInch, numberWhitePixels);
-    
+    var outdoorUse = () => {
+        if (document.querySelector('input[name="neonSignUsageType"]:checked').value == "Outdoor Use") {
+            return true;
+        } else { 
+            return false;
+        }
+    };
+    var includeDimmer = () => {
+        if (document.querySelector('input[name="neonSignDimmer"]:checked').value == "Yes") {
+            return true;
+        } else {
+            return false;
+        }
+    };
+    var addMounting = () => {
+        if (document.querySelector('input[name="neonSignMounting"]:checked').value == "Yes") {
+            return true;
+        } else {
+            return false;
+        }
+    };
+    price.value = calculatePrice(pricePerInch, numberWhitePixels, outdoorUse(), includeDimmer(), addMounting());
     formImg.value = canvas.toDataURL();
 }

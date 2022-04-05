@@ -1,7 +1,18 @@
-function calculatePrice(pricePerInch, pixelCount) {
+function calculatePrice(pricePerInch, pixelCount, outdoorUse, includeDimmer, addMounting) {
     var numInches = (pixelCount * 13) / 136 * 1.1;
-    return parseFloat((numInches * pricePerInch).toFixed(2));
+    var price = numInches * pricePerInch;
+    if (outdoorUse == true) {
+        price = price + (price * 0.1);
+    }
+    if (includeDimmer == true) {
+        price = price + 29;
+    }
+    if (addMounting == true) {
+        price = price + 10;
+    }
+    return parseFloat(price).toFixed(2);
 }
+
 function countPixels(canvas, context) {
     var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
     var rgba = [];

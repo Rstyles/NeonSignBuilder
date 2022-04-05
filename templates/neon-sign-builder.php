@@ -101,6 +101,7 @@
             <div class="dimmer-type flex-container">
                 <div class="dimmer">
                     <h3 class="neonSignHeading">Dimmer with Remote?</h3>
+                    <p>Add a remote with your included dimmer?</p>
                     <div class="dimmerOptions change-radio-button">
                         <input type="radio" name="neonSignDimmer" id="dimmerYes" value="Yes" checked="true">
                         <label for="dimmerYes">Yes (+$29)</label>
@@ -122,15 +123,24 @@
                     </div>
                 </div>
             </div>
+            <div class="mounting">
+                <h3 class="neonSignHeading">Mounting (3M):</h3>
+                <p>Add some 3M Command Stripes to your free screw kit (optional)</p>
+                <p>No tools necessary, <b>indoor use</b></p>
+                <div class="mountingOptions change-radio-button">
+                    <input type="radio" name="neonSignMounting" id="mountingYes" value="Yes" checked="true">
+                    <label for="mountingYes">Yes (+$10)</label>
+                </div>
+                <div class="mountingOptions change-radio-button">
+                    <input type="radio" name="neonSignMounting" id="mountingNo" value="No">
+                    <label for="mountingNo">No</label>
+                </div>
+            </div>
 
             $<input type="text" name="priceField" id="priceField" readonly="true">
             <button id="neonSignSubmit">Submit</button>
             <input type="hidden" id="postImg" name="neonsignPostImg">
         </form>
-    </div>
-
-    <div class="neonSignPriceWrapper">
-        <p id="neonSignPrice"></p>
     </div>
 </div>
 <script src="<?php echo $url . 'dist/NeonSignCanvas.js' ?>"></script>

@@ -70,7 +70,11 @@ $post_data = [
     'type' => 'simple',
     'regular_price' => $_POST['priceField'],
     'description' => 'Color: ' . $_POST['SignColor'] .
-               '</br> Font: ' . $_POST['signFont'],
+               '</br> Font: ' . $_POST['signFont'] .
+               '</br> Support: ' . $_POST['neonSignSupportType'] .
+               '</br> Dimmer: ' . $_POST['neonSignDimmer'] .
+               '</br> Usage: ' . $_POST['neonSignUsageType'] .
+               '</br> Type of Neon: ' . $_POST['neonSignType'],
     'short_description' => 'This custom neon sign was built with the Nozak Consulting Neon Sign Builder.',
     'catalog_visibility' => 'hidden',
     'categories' => [
