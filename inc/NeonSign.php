@@ -84,7 +84,7 @@ $post_data = [
     ],
     'images' => [
         [
-            //'src' => $file_url
+            'src' => $file_url
         ]
     ]
 ];

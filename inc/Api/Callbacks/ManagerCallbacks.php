@@ -3,7 +3,7 @@
  * @package NeonSignBuilder-NozakConsulting
  */
 
-namespace Inc\Api\CallBacks;
+namespace Inc\Api\Callbacks;
 
 use Inc\Base\BaseController;
 
@@ -36,6 +36,8 @@ class ManagerCallbacks extends BaseController
 
 	public function adminSectionManager() {
 		echo 'Add your WooCommerce api credentials here.';
+		echo '<br>';
+		echo 'Add the [neon_sign_builder] shortcode to a page to add the custom sign builder.';
 	}
 
 	public function checkboxField($args) {

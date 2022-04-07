@@ -3,7 +3,6 @@
  * @package NeonSignBuilder-NozakConsulting
  */
 /*
-
 Plugin Name: Neon Sign Custom Builder
 Plugin URI: https://nozakconsulting.com
 Description: Easily embed a Neon Sign builder into a page using a shortcode

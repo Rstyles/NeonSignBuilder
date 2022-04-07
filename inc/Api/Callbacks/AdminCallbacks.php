@@ -3,7 +3,7 @@
  * @package NeonSignBuilder-NozakConsulting
  */
 
-namespace Inc\Api\CallBacks;
+namespace Inc\Api\Callbacks;
 
 use Inc\Base\BaseController;
 

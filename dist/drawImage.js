@@ -1,17 +1,17 @@
 function drawImage(neonSignCanvas, canvasContext, imageElement, canvasText, canvasfont, canvasColor, x, y) {
     if (x === void 0) { x = neonSignCanvas.width / 2; }
-    if (y === void 0) { y = 70; }
+    if (y === void 0) { y = 80; }
     canvasContext.clearRect(0, 0, neonSignCanvas.width, neonSignCanvas.height);
     canvasContext.textBaseline = "ideographic";
     var textMeasurement = canvasContext.measureText(canvasText.value);
     neonSignCanvas.width = textMeasurement.width + 150;
-    neonSignCanvas.height = 225;
+    neonSignCanvas.height = 350;
     canvasContext.fillStyle = "white";
     canvasContext.font = canvasfont;
     canvasContext.shadowColor = canvasColor;
     canvasContext.shadowBlur = 20;
     canvasContext.textAlign = "center";
-    drawLines(canvasContext, canvasText.value, x, y, 70);
+    drawLines(canvasContext, canvasText.value, x, y, 110);
     imageElement.src = canvasContext.canvas.toDataURL();
 }
 function drawLines(context, text, x, y, lineHeight) {
