@@ -31,19 +31,95 @@
           </div>
           <div id="fontPickerRadioGroup" class="fontGroup">
             <h3 class="neonSignHeading">Font:</h3>
+            <!-- font Comic Sans MS, Comic Sans, cursive -->
             <input type="radio" name="signFont" id="fontComicSans" value="Comic Sans MS, Comic Sans, cursive"
               checked="true" />
             <label for="fontComicSans" style="font-family: Comic Sans MS, Comic Sans, cursive">Comic
               Sans</label>
 
+            <!-- font Trattatello, fantasy -->
             <input type="radio" name="signFont" id="fontTrattatello" value="Trattatello, fantasy" />
             <label for="fontTrattatello" style="font-family: Trattatello, fantasy">Trattatello</label>
 
+            <!-- font Andale Mono, monospace -->
             <input type="radio" name="signFont" id="fontAndaleMono" value="Andale Mono, monospace" />
             <label for="fontAndaleMono" style="font-family: Andale Mono, monospace">Andale Mono</label>
 
+            <!-- font Helvetica, sans-serif -->
             <input type="radio" name="signFont" id="fontHelvetica" value="Helvetica, sans-serif" />
             <label for="fontHelvetica" style="font-family: Helvetica, sans-serif">Helvetica</label>
+
+            <!-- font 'Assalwa', Sans-serif -->
+            <input type="radio" name="signFont" id="fontAssalwa" value="'Assalwa', Sans-serif" />
+            <label for="fontAssalwa" style="font-family: 'Assalwa', Sans-serif">Assalwa</label>
+            
+            <!-- font 'ATypewriterForMe', Sans-serif-serif -->
+            <input type="radio" name="signFont" id="fontATypewriterForMe" value="'ATypewriterForMe', Sans-serif-serif" />
+            <label for="ATypewriterForMe" style="font-family: 'ATypewriterForMe', Sans-serif-serif">ATypewriterForMe</label>
+
+            <!-- font 'Avgardn', Sans-serif -->
+            <input type="radio" name="signFont" id="fontAvgardin" value="'Avgardn', Sans-serif" />
+            <label for="fontAvgardin" style="font-family: 'Avgardn', Sans-serif">Avgardn</label>
+
+            <!-- font "Barcelony", Sans-serif -->
+            <input type="radio" name="signFont" id="fontBarcelony" value="'Barcelony', Sans-serif" />
+            <label for="fontBarcelony" style="font-family: 'Barcelony', Sans-serif">Barcelony</label>
+
+            <!-- font "Bauhaus", Sans-serif -->
+            <input type="radio" name="signFont" id="fontBauhaus" value="'Bauhaus', Sans-serif" />
+            <label for="fontBauhaus" style="font-family: 'Bauhaus', Sans-serif">Bauhaus</label>
+
+            <!-- font "Carbono", Sans-serif -->
+            <input type="radio" name="signFont" id="fontCarbono" value="'Carbono', Sans-serif" />
+            <label for="fontCarbono" style="font-family: 'Carbono', Sans-serif">Carbono</label>
+
+            <!-- font "Hamilton", Sans-serif -->
+            <input type="radio" name="signFont" id="fontHamilton" value="'Hamilton', Sans-serif" />
+            <label for="fontHamilton" style="font-family: 'Hamilton', Sans-serif">Hamilton</label>
+
+            <!-- font "Hesterica", Sans-serif -->
+            <input type="radio" name="signFont" id="fontHesterica" value="'Hesterica', Sans-serif" />
+            <label for="fontHesterica" style="font-family: 'Hesterica', Sans-serif">Hesterica</label>
+
+            <!-- font "Kiona", Sans-serif -->
+            <input type="radio" name="signFont" id="fontKiona" value="'Kiona', Sans-serif" />
+            <label for="fontKiona" style="font-family: 'Kiona', Sans-serif">Kiona</label>
+
+            <!-- font "Lovelo Line", Sans-serif -->
+            <input type="radio" name="signFont" id="fontLoveloLine" value="'Lovelo Line', Sans-serif" />
+            <label for="fontLoveloLine" style="font-family: 'Lovelo Line', Sans-serif">Lovelo Line</label>
+
+            <!-- font "Market Street", Sans-serif -->
+            <input type="radio" name="signFont" id="fontMarketStreet" value="'Market Street', Sans-serif" />
+            <label for="fontMarketStreet" style="font-family: 'Market Street', Sans-serif">Market Street</label>
+
+            <!-- font "Neon Glow", Sans-serif -->
+            <input type="radio" name="signFont" id="fontNeonGlow" value="'Neon Glow', Sans-serif" />
+            <label for="fontNeonGlow" style="font-family: 'Neon Glow', Sans-serif">Neon Glow</label>
+
+            <!-- font "Neon Tubes", Sans-serif -->
+            <input type="radio" name="signFont" id="fontNeonTubes" value="'Neon Tubes', Sans-serif" />
+            <label for="fontNeonTubes" style="font-family: 'Neon Tubes', Sans-serif">Neon Tubes</label>
+
+            <!-- font "Northwell Alt", Sans-serif -->
+            <input type="radio" name="signFont" id="fontNorthwellAlt" value="'Northwell Alt', Sans-serif" />
+            <label for="fontNorthwellAlt" style="font-family: 'Northwell Alt', Sans-serif">Northwell Alt</label>
+
+            <!-- font "Paperdaisy", Sans-serif -->
+            <input type="radio" name="signFont" id="fontPaperdaisy" value="'Paperdaisy', Sans-serif" />
+            <label for="fontPaperdaisy" style="font-family: 'Paperdaisy', Sans-serif">Paperdaisy</label>
+
+            <!-- font "Quinzey", Sans-serif -->
+            <input type="radio" name="signFont" id="fontQuinzey" value="'Quinzey', Sans-serif" />
+            <label for="fontQuinzey" style="font-family: 'Quinzey', Sans-serif">Quinzey</label>
+
+            <!-- font "Sebastian", Sans-serif -->
+            <input type="radio" name="signFont" id="fontSebastian" value="'Sebastian', Sans-serif" />
+            <label for="fontSebastian" style="font-family: 'Sebastian', Sans-serif">Sebastian</label>
+
+            <!-- font "The Bouquet List", Sans-serif -->
+            <input type="radio" name="signFont" id="fontTheBouquetList" value="'The Bouquet List', Sans-serif" />
+            <label for="fontTheBouquetList" style="font-family: 'The Bouquet List', Sans-serif">The Bouquet List</label>
           </div>
         </div>
 
