@@ -1,0 +1,14 @@
+{
+    "name": "nozak-consulting/neon-sign-builder",
+    "description": "Easily create a neon sign builder with a shortcode",
+    "type": "project",
+    "require": {
+        "automattic/woocommerce": "^3.0"
+    },
+    "license": "pg1",
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "./inc"
+        }
+    }
+}

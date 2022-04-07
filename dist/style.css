@@ -1,0 +1,388 @@
+/* UNILITY CLASSES */
+.change-radio-button input[type="radio"] {
+  display: none;
+}
+.change-radio-button input[type="radio"]:checked + label {
+  border: 2px solid black;
+}
+.flex-container {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin-bottom: 1em;
+  }
+
+.custom-neon-builder-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.2);
+}
+
+canvas {
+  border: 1px black solid;
+}
+
+#neonSignCanvas {
+  display: none;
+}
+
+.canvas_left {
+  display: inline-flexbox;
+  float: left;
+  width: 48%;
+  max-width: 48%;
+  height: 1100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../dist/img/neon-sign-background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-color: #555;
+  white-space: nowrap;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 1em;
+}
+
+.canvas_right {
+  display: inline-flexbox;
+  float: right;
+  width: 48%;
+  max-width: 48%;
+  text-align: center;
+  height: 1100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .canvas_left {
+    width: 100%;
+    max-width: 100%;
+  }
+  .canvas_right {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.neonSignHelper {
+  height: 100%;
+  vertical-align: middle;
+}
+
+img#neonSignImage {
+  margin: auto;
+  padding-top: 15%;
+  vertical-align: middle;
+}
+
+
+/* RADIO BUTTONS */
+input[type="radio"] {
+  margin: 18px;
+}
+.colorPickerRadioGroup {
+  width: 50%;
+}
+input[type="radio"]#ColorRed:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: red;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+  opacity: 100%;
+}
+input[type="radio"]#ColorRed:checked:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: red;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  opacity: 100%;
+}
+input[type="radio"]#ColorGreen:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: green;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+  opacity: 100%;
+}
+input[type="radio"]#ColorGreen:checked:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: green;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  opacity: 100%;
+}
+input[type="radio"]#ColorBlue:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: blue;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+  opacity: 100%;
+}
+input[type="radio"]#ColorBlue:checked:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: blue;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  opacity: 100%;
+}
+input[type="radio"]#ColorOrange:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: orange;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+  opacity: 100%;
+}
+input[type="radio"]#ColorOrange:checked:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: orange;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  opacity: 100%;
+}
+input[type="radio"]#ColorPink:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: pink;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+  opacity: 100%;
+}
+input[type="radio"]#ColorPink:checked:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: pink;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  opacity: 100%;
+}
+input[type="radio"]#ColorWhite:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: white;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+  opacity: 100%;
+}
+input[type="radio"]#ColorWhite:checked:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: white;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  opacity: 100%;
+}
+input[type="radio"]#ColorYellow:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: yellow;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+  opacity: 100%;
+}
+input[type="radio"]#ColorYellow:checked:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: yellow;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  opacity: 100%;
+}
+input[type="radio"]#ColorIceBlue:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: #24b7de;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+  opacity: 100%;
+}
+input[type="radio"]#ColorIceBlue:checked:after {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: #24b7de;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  opacity: 100%;
+}
+
+/* FONT GROUP */
+.fontGroup input[type="radio"] {
+  display: none;
+}
+.fontGroup input[type="radio"]:checked + label {
+  border: 2px solid black;
+}
+.fontGroup label {
+  padding: 2px;
+  margin: 3% 2% 3% 2%;
+}
+#fontSizePickerRadioGroup {
+  margin: 2%;
+}
+.fontSizeSlider:hover {
+  opacity: 1;
+}
+.fontSizeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+.fontSizeSlider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.color-font {
+  width: 100%;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+.color-font .fontGroup {
+  width: 50%;
+}
+.color-font .fontGroup label {
+  font-size: 1.5em;
+}
+
+.fontSizeSlider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* SUPPORT AND SIGN USAGE OPTIONS */
+.usage-support {
+  width: 100%;
+}
+
+/* DIMMER AND NEON TYPE OPTIONS */
+.dimmer-type {
+  width: 100%;
+}
+
+/* 3M MOUNTING OPTIONS */
+.mounting {
+  display: inherit;
+}
